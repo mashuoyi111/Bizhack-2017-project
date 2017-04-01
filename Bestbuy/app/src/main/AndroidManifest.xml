@@ -35,7 +35,14 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".LocationMap"
+            android:name=".customer_request"
+            android:label="@string/title_activity_location_map">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="BizHack.team9.StartPage" />
+        </activity>
+        <activity
+            android:name=".employee_request"
             android:label="@string/title_activity_location_map">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

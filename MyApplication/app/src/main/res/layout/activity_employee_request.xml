@@ -12,20 +12,24 @@
         android:layout_width="396dp"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/bbuy2008" />
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
     <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
+        android:text="no request right now"
+        android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:textColor ="@color/snow"
+        android:layout_weight="1"
         android:id="@+id/textView"
-        android:layout_weight="0.95" />
+        android:textSize="25sp" />
 
     <Button
         android:text="Button"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="getRequest"
-        android:id="@+id/button"
-        android:layout_weight="0.04" />
+        android:layout_width="126dp"
+        android:layout_height="91dp"
+        android:onClick="answerRequest"
+        android:id="@+id/buttonGetRequest"
+        android:layout_weight="0.42"
+        android:visibility="invisible" />
+</LinearLayout>
 </LinearLayout>

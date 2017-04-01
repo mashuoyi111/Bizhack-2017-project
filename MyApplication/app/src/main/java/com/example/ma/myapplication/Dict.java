@@ -66,6 +66,11 @@ public class Dict extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void goToProduct(View v){
+        Intent int1 = new Intent(Dict.this, bestbuy_api.class);
+        startActivity(int1);
+    }
+
 
 
 }

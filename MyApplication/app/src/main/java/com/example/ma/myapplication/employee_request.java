@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ma.myapplication.R;
@@ -15,6 +16,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Ma on 2017/3/31.
@@ -27,16 +31,37 @@ public class employee_request extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_request);
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                TextView t=(TextView) findViewById(R.id.textView);
+                String s=t.getText().toString();
+                if(!s.equals("no request right now")){
+                  this.cancel();
+                }else{
+                    getRequest();
+                }
+            }
+        }, 0, 1000);
     }
 
-    public void getRequest(View view) {
+    public void getRequest() {
         GetAsyncTask g=new GetAsyncTask();
         g.url="get.do";
         g.execute();
     }
 
+    public void answerRequest() {
+        TextView t=(TextView) findViewById(R.id.textView);
+        t.setText("You will go to A5 area");
+    }
+
     public void setTextview(String s){
         TextView t=(TextView) findViewById(R.id.textView);
+        if(!s.equals("no request right now")){
+            Button b=(Button) findViewById(R.id.buttonGetRequest);
+            b.setVisibility(View.VISIBLE);
+        }
         t.setText(s);
     }
 

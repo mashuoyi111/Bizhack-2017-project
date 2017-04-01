@@ -13,12 +13,13 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/bbuy2008" />
     <TextView
-        android:text="TextView"
+        android:text="No Request Right Now!"
         android:layout_width="match_parent"
         android:textColor ="@color/snow"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:layout_weight="0.95" />
+        android:layout_weight="0.95"
+        android:textSize="30sp" />
 
     <Button
         android:text="Button"

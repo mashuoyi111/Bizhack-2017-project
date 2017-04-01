@@ -37,4 +37,9 @@ public class MainActivity extends Activity {
 
 
     }
+
+    public void toEmployee(View v){
+        Intent int1 = new Intent(MainActivity.this, employee_request.class);
+        startActivity(int1);
+    }
 }

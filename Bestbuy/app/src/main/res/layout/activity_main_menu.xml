@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -30,8 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Product Lookup"
         tools:layout_editor_absoluteY="231dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+/>
 
     <Button
         android:id="@+id/button3"
@@ -39,8 +38,7 @@
         android:layout_height="wrap_content"
         android:text="Message an Online Representative"
         tools:layout_editor_absoluteY="308dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+ />
 
     <Button
         android:id="@+id/button4"
@@ -48,8 +46,7 @@
         android:layout_height="wrap_content"
         android:text="Request a Blue Shirt"
         tools:layout_editor_absoluteY="401dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+ />
 
     <EditText
         android:id="@+id/editText4"
@@ -61,4 +58,4 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="122dp" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

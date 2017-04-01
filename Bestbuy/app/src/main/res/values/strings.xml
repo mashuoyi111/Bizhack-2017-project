@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Bestbuy</string>
+    <string name="title_activity_location_map">map</string>
 </resources>

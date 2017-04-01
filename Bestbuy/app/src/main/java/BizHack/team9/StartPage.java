@@ -3,7 +3,7 @@ package BizHack.team9;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Mainpage extends AppCompatActivity {
+public class StartPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

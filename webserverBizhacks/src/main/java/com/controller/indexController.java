@@ -16,7 +16,7 @@ public class indexController {
 
     @RequestMapping(value="/add.do",method = RequestMethod.GET)
     public ModelAndView welcome(){
-            String message="new request added!";
+            String message="We have noticed the blue shirts, please wait";
             ModelAndView mv=new ModelAndView("hello","message",message);
             aRequest=true;
             unAnswer=true;
@@ -43,7 +43,6 @@ public class indexController {
         }else {
             mv = new ModelAndView("hello", "message", "Hey! Blue shirt NO.14 is coming to you!");
         }
-        unAnswer=false;
         return mv;
     }
 

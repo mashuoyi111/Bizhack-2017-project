@@ -37,7 +37,6 @@ public class employee_request extends AppCompatActivity {
                 TextView t=(TextView) findViewById(R.id.textView);
                 String s=t.getText().toString();
                 if(!s.equals("no request right now")){
-                  this.cancel();
                 }else{
                     getRequest();
                 }
@@ -51,10 +50,12 @@ public class employee_request extends AppCompatActivity {
         g.execute();
     }
 
-    public void answerRequest() {
+    public void answerRequest(View v) {
         GetAsyncTask g=new GetAsyncTask();
         g.url="responseans.do";
         g.execute();
+        Button b=(Button) findViewById(R.id.buttonGetRequest);
+        b.setVisibility(View.INVISIBLE);
     }
 
     public void setTextview(String s){

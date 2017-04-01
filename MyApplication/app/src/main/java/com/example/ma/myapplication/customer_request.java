@@ -6,6 +6,7 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ma.myapplication.R;
@@ -17,6 +18,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Ma on 2017/3/31.
@@ -36,12 +39,26 @@ public class customer_request extends AppCompatActivity {
         GetAsyncTask g=new GetAsyncTask();
         g.url="add.do";
         g.execute();
+        Button b=(Button) findViewById(R.id.buttonAddRequest);
+        b.setVisibility(View.INVISIBLE);
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                    getRequest();
 
+            }
+        }, 0, 1000);
     }
 
     public void setTextview(String s){
         TextView t=(TextView) findViewById(R.id.textView);
         t.setText(s);
+    }
+
+    public void getRequest() {
+        customer_request.GetAsyncTask g=new customer_request.GetAsyncTask();
+        g.url="getans.do";
+        g.execute();
     }
 
     class GetAsyncTask extends AsyncTask<String, Void, String> {

@@ -52,8 +52,9 @@ public class employee_request extends AppCompatActivity {
     }
 
     public void answerRequest() {
-        TextView t=(TextView) findViewById(R.id.textView);
-        t.setText("You will go to A5 area");
+        GetAsyncTask g=new GetAsyncTask();
+        g.url="responseans.do";
+        g.execute();
     }
 
     public void setTextview(String s){

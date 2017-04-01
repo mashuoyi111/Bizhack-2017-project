@@ -24,7 +24,7 @@
         android:textSize="25sp" />
 
     <Button
-        android:text="Button"
+        android:text="answer"
         android:layout_width="126dp"
         android:layout_height="91dp"
         android:onClick="answerRequest"

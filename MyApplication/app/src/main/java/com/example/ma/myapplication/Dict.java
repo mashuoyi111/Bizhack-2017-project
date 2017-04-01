@@ -35,7 +35,7 @@ public class Dict extends AppCompatActivity {
         camera.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Dict.this, Cameraa.class);
+                Intent int1 = new Intent(Dict.this, camera_tutorial.class);
                 startActivity(int1);
             }
         });

@@ -88,6 +88,15 @@
                 android:value="com.example.ma.myapplication.MainActivity" />
         </activity>
 
+        <activity
+            android:name=".camera_tutorial"
+            android:label="@string/title_activity_dict"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ma.myapplication.MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>

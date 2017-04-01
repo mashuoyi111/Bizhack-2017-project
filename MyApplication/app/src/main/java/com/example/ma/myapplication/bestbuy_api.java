@@ -30,10 +30,6 @@ public class bestbuy_api extends AppCompatActivity {
         setContentView(R.layout.activity_bestbuy_api);
     }
 
-    public void requestBlueShirt(View v){
-        Intent int1 = new Intent(bestbuy_api.this, customer_request.class);
-        startActivity(int1);
-    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

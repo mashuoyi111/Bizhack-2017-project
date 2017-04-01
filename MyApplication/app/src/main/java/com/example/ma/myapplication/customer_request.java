@@ -1,5 +1,6 @@
 package com.example.ma.myapplication;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -40,7 +41,14 @@ public class customer_request extends AppCompatActivity {
         g.url="add.do";
         g.execute();
         Button b=(Button) findViewById(R.id.buttonAddRequest);
-        b.setVisibility(View.INVISIBLE);
+        b.setText("see product lookup while I'm waiting");
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int1 = new Intent(customer_request.this, bestbuy_api.class);
+                startActivity(int1);
+            }
+        });
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {

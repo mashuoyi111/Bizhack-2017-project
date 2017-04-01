@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     android:weightSum="1"
     android:background="@color/Bestbuyblue">
-
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="396dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/bbuy2008" />
+
     <LinearLayout android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    <TextView
+
+        <TextView
         android:text="no request right now"
         android:layout_width="205dp"
         android:layout_height="wrap_content"

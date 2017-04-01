@@ -83,6 +83,14 @@ public class Dict extends AppCompatActivity {
             }
         });
 
+        Button chat = (Button) findViewById(R.id.chat);
+        Blueshirt.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent int1 = new Intent(Dict.this, customer_request.class);
+                startActivity(int1);
+            }
+        });
         text1 = (EditText) findViewById(R.id.product);
 
     };

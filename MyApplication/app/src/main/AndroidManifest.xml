@@ -93,6 +93,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ma.myapplication.MainActivity" />
         </activity>
+        <activity
+            android:name=".chat"
+            android:label="@string/title_activity_chat"
+            android:parentActivityName=".Dict"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ma.myapplication.Dict" />
+        </activity>
     </application>
 
 </manifest>

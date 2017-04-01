@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.websitesMapper">
+
+    <select id="getAllWebsites" resultType="Website">
+        select * from websites
+    </select>
+
+    <insert id="insertWebsite" parameterType="Website" useGeneratedKeys="true" keyProperty="web_id">
+        insert into websites(web_name,web_comment,web_url,fav,tag_id,user_name) values (#{web_name},#{web_comment},#{web_url},#{fav},#{tag_id},#{user_name})
+    </insert>
+
+    <select id="getWebsitesByTagid" parameterType="Integer" resultType="Website">
+        select * from websites where tag_id=#{tag_id}
+    </select>
+
+    <select id="getWebsiteById" parameterType="Integer" resultType="Website">
+        select * from websites where web_id=#{web_id}
+    </select>
+
+    <delete id="deleteWebsite" parameterType="Integer">
+        delete from websites where web_id=#{web_id}
+    </delete>
+
+    <update id="updateWebsite" parameterType="Website">
+        update websites set web_name=#{web_name}, web_comment=#{web_comment}, web_url= #{web_url}, fav=#{fav} where web_id=#{web_id}
+    </update>
+
+    <select id="searchWebsitesByName" parameterType="map" resultType="Website">
+        select * from websites where user_name=#{user_name} AND web_name like "%"#{web_name}"%"
+    </select>
+
+</mapper>

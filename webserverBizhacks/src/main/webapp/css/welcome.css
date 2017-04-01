@@ -1,0 +1,105 @@
+body {
+	background:#FFF8D7;
+}
+
+th{
+    text-align: center;
+}
+
+form.search{
+     padding:15px;
+     width: 80%;
+     margin:0 auto;
+     text-align:center;
+
+}
+
+inputbox{
+     width: 50%;
+
+}
+
+
+mainContent{
+    padding:10px;
+    width:900px;
+    float:left;
+    }
+
+
+
+table.tags{
+    width: 400px;
+}
+
+table.sidebar {
+    position: absolute;
+    left: 0%;
+    width: 12%;
+    top:5%;
+ }
+
+tr.sidebar:nth-child(4n) {
+     background: #E6E6F2;
+     }
+tr.sidebar:nth-child(4n+2) {
+     background: #DDDDFF;
+     }
+
+th.websiteUrl{
+    width:30%
+}
+
+
+th.websiteComment{
+    width:20%
+}
+
+th.websiteFav{
+    width:15%
+}
+
+th.websiteName{
+    width:15%
+}
+
+table.websites {
+     position: absolute;
+     left: 15%;
+     top: 15%;
+     width: 60%;
+
+ }
+
+
+tr.websites:nth-child(4n+1) {
+     background: #CCFF99;
+     }
+tr.websites:nth-child(4n-1) {
+     background: #CCFFCC;
+     }
+tr.websitesHeading {
+     background: #D2E9FF;
+     }
+tr.websitesFav {
+     background: #EBD6E6;
+     }
+tr.newWebsite {
+     background: #EBD6D6;
+     width: 60%;
+     }
+.logout{
+    float:right;
+    text-align:right;
+    width:200px;
+}
+.searchButton{
+    float:left;
+    text-align:left;
+}
+.welcomebar{
+    width: 80%;
+    margin:0 auto;
+    text-align:center;
+
+}

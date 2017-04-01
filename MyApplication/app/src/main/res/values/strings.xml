@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">Best buy demo</string>
-    <string name="address">Here is the address</string>
+    <string name="address">Current location</string>
 
     <string name="title_activity_camera">Camera</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_maps">Map</string>
-    <string name="title_activity_dict">dictionary</string>
-    <string name="hint2">Enter Your Want Here</string>
-    <string name="bs">Ask Blue Shirts About It!</string>
-    <string name="qq">What do you want today?</string>
+    <string name="title_activity_dict">Request</string>
+    <string name="hint2">Enter product category/keyword</string>
+    <string name="bs">Request a Blue Shirt</string>
+    <string name="qq">What can we help you with?</string>
     <string name="btnIntend">Take Picture</string>
 
 </resources>

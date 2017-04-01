@@ -55,4 +55,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    public void startBestbuyApi(View view) {
+        Intent intent = new Intent(this, bestbuy_api.class);
+        startActivity(intent);
+    }
+
+
 }

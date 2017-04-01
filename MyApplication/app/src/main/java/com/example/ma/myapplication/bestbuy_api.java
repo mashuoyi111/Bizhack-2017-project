@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.apache.http.HttpResponse;
@@ -28,18 +29,19 @@ public class bestbuy_api extends AppCompatActivity {
 
     public void addRequest(View view) {
         GetAsyncTask g=new GetAsyncTask();
-        g.url="add.do";
+        EditText e=(EditText) findViewById(R.id.apieditText);
+        g.web_id=e.getText().toString();
         g.execute();
 
     }
 
     public void setTextview(String s){
-        TextView t=(TextView) findViewById(R.id.textView);
+        TextView t=(TextView) findViewById(R.id.apitextView);
         t.setText(s);
     }
 
     class GetAsyncTask extends AsyncTask<String, Void, String> {
-        public String url="";
+        public String web_id="";
 
         @Override
         protected void onPreExecute() {
@@ -54,7 +56,7 @@ public class bestbuy_api extends AppCompatActivity {
             try {
 
                 //------------------>>
-                HttpGet httpGet = new HttpGet("http://192.168.0.233:8080/website/"+url);
+                HttpGet httpGet = new HttpGet("https://msi.bbycastatic.ca/mobile-si/si/v4/pdp/overview/"+web_id);
                 HttpClient httpclient = new DefaultHttpClient();
                 response = httpclient.execute(httpGet);
 
@@ -68,7 +70,7 @@ public class bestbuy_api extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            return out.toString();
+            return out.toString().substring(0,100);
 
         }
         @Override

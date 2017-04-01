@@ -3,4 +3,25 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/apitextView"
+        android:layout_weight="0.95" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/apieditText" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addRequest"
+        android:id="@+id/apibutton"
+        android:layout_weight="0.04" />
 </LinearLayout>

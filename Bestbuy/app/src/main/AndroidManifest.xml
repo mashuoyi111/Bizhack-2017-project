@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartPage">
+        <activity android:name=".customer_request">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,14 +37,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".customer_request"
-            android:label="@string/title_activity_location_map">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="BizHack.team9.StartPage" />
-        </activity>
         <activity
             android:name=".employee_request"
             android:label="@string/title_activity_location_map">

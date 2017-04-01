@@ -22,7 +22,7 @@ public class Dict extends AppCompatActivity {
     @Override
     protected void onResume (){
         super.onResume();
-        if(hack) text1.setText("A Whole new mac book!");
+        if(hack) text1.setText("10389622: A Whole new mac book!");
         hack=false;
     }
 

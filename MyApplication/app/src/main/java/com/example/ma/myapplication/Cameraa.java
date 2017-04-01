@@ -1,4 +1,5 @@
 package com.example.ma.myapplication;
+import android.content.Intent;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -7,6 +8,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -26,6 +29,16 @@ public class Cameraa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_camera);
+
+        Button pic= (Button) findViewById(R.id.btnIntend);
+        pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dict.hack=true;
+                Intent int1 = new Intent(Cameraa.this,Dict.class);
+                startActivity(int1);
+            }
+        });
 
         preview=(SurfaceView)findViewById(R.id.videoView1);
         previewHolder=preview.getHolder();

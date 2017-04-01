@@ -10,13 +10,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 /**
  * A login screen that offers login via email/password.
  */
 public class Dict extends AppCompatActivity {
-    
+    public static boolean hack=false;
+    static EditText text1;
+    @Override
+    protected void onResume (){
+        super.onResume();
+        if(hack) text1.setText("A Whole new mac book!");
+        hack=false;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +48,9 @@ public class Dict extends AppCompatActivity {
                 startActivity(int1);
             }
         });
+
+        text1 = (EditText) findViewById(R.id.product);
+
     };
 
 

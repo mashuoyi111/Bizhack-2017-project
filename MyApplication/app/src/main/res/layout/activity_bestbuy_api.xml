@@ -5,27 +5,25 @@
     android:layout_height="match_parent"
     android:background="@color/Bestbuyblue">
 
-    <TextView
-        android:textColor ="@color/snow"
-        android:text="Here is your product details"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/apitextView"
-        android:layout_weight="0.95" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="357dp"
-        app:srcCompat="@drawable/macbook"
-        android:id="@+id/imageView3"
-        android:layout_weight="0.75" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:text="Okay, I still need a blue shirt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="requestBlueShirt"
-        android:id="@+id/button2"
-        android:layout_weight="1.29" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/spec"
+                android:id="@+id/imageView3" />
+
+            </LinearLayout>>
+    </ScrollView>
+
 
 </LinearLayout>

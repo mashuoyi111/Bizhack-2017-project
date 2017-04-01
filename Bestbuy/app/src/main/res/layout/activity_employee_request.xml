@@ -15,6 +15,7 @@
         android:text="Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="getRequest"
         android:id="@+id/button"
         android:layout_weight="0.04" />
 </LinearLayout>

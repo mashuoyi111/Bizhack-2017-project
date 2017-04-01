@@ -46,6 +46,9 @@ public class Cameraa extends AppCompatActivity {
         previewHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         camera= Camera.open();
         camera.setDisplayOrientation (90);
+        Camera.Parameters params = camera.getParameters();
+        params.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+        camera.setParameters(params);
         initPreview(800,800);
         startPreview();
     }

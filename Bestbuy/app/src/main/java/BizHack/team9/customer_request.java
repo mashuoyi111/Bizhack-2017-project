@@ -55,9 +55,9 @@ public class customer_request extends AppCompatActivity {
             try {
 
                 //------------------>>
-                HttpGet httppost = new HttpGet("http://192.168.0.233:8080/website/"+url);
+                HttpGet httpGet = new HttpGet("http://192.168.0.233:8080/website/"+url);
                 HttpClient httpclient = new DefaultHttpClient();
-                response = httpclient.execute(httppost);
+                response = httpclient.execute(httpGet);
 
                 response.getEntity().writeTo(out);
                 // StatusLine stat = response.getStatusLine();

@@ -1,10 +1,12 @@
-package BizHack.team9;
+package com.example.ma.myapplication;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.ma.myapplication.R;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;

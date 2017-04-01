@@ -1,47 +1,37 @@
 package com.controller;
 
-import com.service.exampleService;
-import com.service.impl.websitesServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by Administrator on 2017/2/16.
  */
 
 @Controller
-@RequestMapping("/home")
 public class indexController {
-    private exampleService exampleServiceImpl = new websitesServiceImpl();
+    private boolean aRequest=false;
 
-    @RequestMapping("/index.do")
-    public ModelAndView welcome(HttpServletRequest request,
-                                @RequestParam(required = false) Integer tagNum,
-                                @RequestParam(required = false) Integer tagId){
-       String message="";
-            ModelAndView mv=new ModelAndView("expired","message",message);
-
+    @RequestMapping(value="/add.do",method = RequestMethod.GET)
+    public ModelAndView welcome(){
+            String message="new request added!";
+            ModelAndView mv=new ModelAndView("hello","message",message);
+            aRequest=true;
             return mv;
 
     }
 
-    @RequestMapping(value="/hello.do",method = RequestMethod.POST)
-    public ModelAndView hello(Integer password){
+    @RequestMapping(value="/get.do",method = RequestMethod.GET)
+    public ModelAndView hello(){
         ModelAndView mv;
-        if(password!=null&&password==123){
-            mv=new ModelAndView("hello","message","Your are right!!!");
+        if(aRequest){
+            mv=new ModelAndView("hello","message","There is a customer request from A5 area!");
         }else {
-            mv = new ModelAndView("hello", "message", "Incorrect!!!");
+            mv = new ModelAndView("hello", "message", "no request right now");
         }
+        aRequest=false;
         return mv;
     }
-
-
-
 
 }

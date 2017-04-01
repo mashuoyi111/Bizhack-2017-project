@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@color/Bestbuyblue">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bbuy2008" />
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor ="@color/snow"
         android:id="@+id/textView"
         android:layout_weight="0.95" />
 
     <Button
         android:text="Button"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="getRequest"

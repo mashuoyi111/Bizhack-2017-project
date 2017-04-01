@@ -1,42 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/Bestbuyblue"
+    android:id="@+id/db1_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ma.myapplication.MainActivity">
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bbuy2008" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="132dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Confirm Your Location"
+            android:textColor ="@color/snow"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="132dp">
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="230dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="27dp"
+            android:textColor ="@color/snow"
+            android:maxLines="1"
+            android:text="you are at Richmond branch"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/map1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/mark"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
 
     <Button
-        android:text="customer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        style="@style/Widget.AppCompat.Button"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="114dp"
-        android:onClick="startCustomerRequest"
-        android:id="@+id/button1" />
-
-    <Button
-        android:text="employee"
-        android:layout_width="wrap_content"
+        android:layout_width="145dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="startEmployeeRequest"
-        android:id="@+id/button2" />
+        android:layout_gravity="center_horizontal|center"
+        android:text="That's where I am!" />
 
-    <Button
-        android:text="bestbuy api"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button1"
-        android:onClick="startBestbuyApi"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button3" />
-</RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

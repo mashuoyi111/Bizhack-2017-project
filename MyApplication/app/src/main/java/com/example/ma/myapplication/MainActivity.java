@@ -45,62 +45,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void addRequest(View view) {
-        GetAsyncTask g=new GetAsyncTask();
-        g.url="add.do";
-        g.execute();
-
+    public void startCustomerRequest(View view) {
+        Intent intent = new Intent(this, customer_request.class);
+        startActivity(intent);
     }
 
-    public void getRequest(View view) {
-        GetAsyncTask g=new GetAsyncTask();
-        g.url="get.do";
-        g.execute();
-    }
-
-    public void setTextview(String s){
-        TextView t=(TextView) findViewById(R.id.textView);
-        t.setText(s);
-    }
-
-
-    class GetAsyncTask extends AsyncTask<String, Void, String> {
-        public String url="";
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-        }
-
-        @Override
-        protected String doInBackground(String... urls) {
-            HttpResponse response=null;
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            try {
-
-                //------------------>>
-                HttpGet httppost = new HttpGet("http://192.168.0.233:8080/website/"+url);
-                HttpClient httpclient = new DefaultHttpClient();
-                response = httpclient.execute(httppost);
-
-                response.getEntity().writeTo(out);
-                // StatusLine stat = response.getStatusLine();
-
-
-
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return out.toString();
-
-        }
-        @Override
-        protected void onPostExecute(String result) {
-            setTextview(result);
-        }
+    public void startEmployeeRequest(View view) {
+        Intent intent = new Intent(this, employee_request.class);
+        startActivity(intent);
     }
 
 }

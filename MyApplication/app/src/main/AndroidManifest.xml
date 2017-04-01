@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".customer_request"/>
         <activity android:name=".employee_request"/>
+        <activity android:name=".bestbuy_api"/>
 
     </application>
 
